@@ -41,3 +41,16 @@
 | **可用性** | 2リージョン間で高可用性 | 広域耐障害性 |
 | **適した用途** | DR対策、アクティブ-アクティブ運用 | グローバルデータ管理 |
 
+# VPC Service ControlsとPrivate Google Accessの違い
+| 機能|VPC Service Controls|Private Google Access|
+|--|--|--|
+| **目的**|データアクセスの境界管理|Googleサービスへの内部接続|
+| **対象**|BigQuery,Cloud Storageなど|VPC内のCompute Engine,Dataflowなど|
+| **動作原理**|サービスへのアクセス制限を設定|インターネットなしでGoogleサービスに接続|
+| **主な用途**|データ漏洩防止、組織境界の保護|外部IPなしのインスタンス運用|
+| **必要な設定**|VPC境界を作成し対象サービスを追加|VPCのサブネットでPrivate Google Accessを有効化|
+| **影響範囲**|VPC内のアクセス制御を強化|特定のサブネット内のみ有効|
+| **セキュリティ強化**|不正アクセス防止、データ保護向上|インターネット不要で安全に通信可能|
+
+
+
