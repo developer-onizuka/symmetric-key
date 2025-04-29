@@ -62,3 +62,12 @@
 | **主なユースケース** | サーバーレスアプリが VPC 内のリソースに接続 | Cloud Composer などのサービスへプライベート接続 |
 
 
+| 機能 | Private Service Connect (PSC) | Private Google Access |
+|--|--|--|
+| **目的** | Googleサービスや他のVPCへのプライベート接続 | 外部IPなしでGoogle Cloud APIにアクセス |
+| **適用範囲** | Cloud SQL, BigQuery, Cloud Composer など | Cloud Storage, BigQuery などのAPI |
+| **接続方法** | Google Cloud のプライベートエンドポイントを設定 | VPC のサブネットで Private Google Access を有効化 |
+| **セキュリティ** | 完全なプライベートネットワーク内接続 | 外部IPなしで Google API にアクセス |
+| **主なユースケース** | Cloud Composer の Web サーバーに接続 | Dataflow のワーカーが Cloud Storage にアクセス |
+
+
