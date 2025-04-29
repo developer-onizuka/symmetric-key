@@ -41,7 +41,7 @@
 | **可用性** | 2リージョン間で高可用性 | 広域耐障害性 |
 | **適した用途** | DR対策、アクティブ-アクティブ運用 | グローバルデータ管理 |
 
-# VPC Service ControlsとPrivate Google Accessの違い
+# VPC Service Controls と Private Google Accessの違い
 | 機能|VPC Service Controls|Private Google Access|
 |--|--|--|
 | **目的**|データアクセスの境界管理|Googleサービスへの内部接続|
@@ -52,5 +52,13 @@
 | **影響範囲**|VPC内のアクセス制御を強化|特定のサブネット内のみ有効|
 | **セキュリティ強化**|不正アクセス防止、データ保護向上|インターネット不要で安全に通信可能|
 
+# VPC Serverless Access と Private Service Connect (PSC)の違い
+| 機能 | VPC Serverless Access | Private Service Connect (PSC) |
+|--|--|--|
+| **目的** | サーバーレス環境から VPC 内リソースに接続 | Google サービスや他の VPC へのプライベート接続 |
+| **適用範囲** | Cloud Functions, Cloud Run, App Engine | Cloud SQL, BigQuery, 他の VPC など |
+| **接続方法** | VPC のリソースにサーバーレス環境からアクセス | 外部 IP を使わずに Google サービスや別 VPC に接続 |
+| **セキュリティ** | VPC 内のデータベースや API へのプライベート接続 | インターネットなしで Google サービスと通信 |
+| **主なユースケース** | サーバーレスアプリが VPC 内のリソースに接続 | Cloud Composer などのサービスへプライベート接続 |
 
 
