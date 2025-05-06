@@ -70,4 +70,13 @@
 | **セキュリティ** | 完全なプライベートネットワーク内接続 | 外部IPなしで Google API にアクセス |
 | **主なユースケース** | Cloud Composer の Web サーバーに接続 | Dataflow のワーカーが Cloud Storage にアクセス |
 
+# Self Attentionの実装
+|特性|エンコーダーのSelf-Attention|デコーダーのSelf-Attention|
+|---|---|---|
+|**情報の流れ**|双方向（Bidirectional）|片方向（Unidirectional）|
+|**単語の参照**|前後の単語を両方参照|過去の単語のみ参照|
+|**主な用途**|テキスト理解（分類・検索）|文章生成（逐次予測）|
+|**マスク処理**|なし|あり（未来の単語を隠す）|
+|**代表的なモデル**|BERT,RoBERTa,ALBERT|GPT-3,GPT-4,Llama|
+
 
